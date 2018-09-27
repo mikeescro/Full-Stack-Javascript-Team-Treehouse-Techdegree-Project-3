@@ -15,13 +15,8 @@ $(document).ready(function() {
   		$('#other-field').hide();
   	}
   });
-/////////////////// T- Shirt Section ///////////////////
-///////////////////                  ///////////////////
-
-  // Hide Color select until a design is selected
+//Shirts//
   $('#colors-js-puns').hide();
-
-  // Change function to display associated T-Shirt colors per designs
 
   // Return true/false for form validation
   var shirtSelected = false;
@@ -43,11 +38,7 @@ $(document).ready(function() {
   	}
   });
 
-/////////////////// Activities Section ///////////////////
-///////////////////                  ////////////////////
-
-// Section is a bit longer that I would like. Would be great to refactor, by assigning each activity to an object literal that has key:value pairs for cost and time of day. This way we can use a jQuery .each() function to loop over the activities and add/remove classes & append/remove the unavailable methods as well as update the total cost.
-
+//Activities
 	// Set variables for activities
 	var jsFrameworks = $("input[name='js-frameworks'");
 	var jsLibraries = $("input[name='js-libs']");
@@ -144,11 +135,10 @@ $(document).ready(function() {
 	});
 
 
-/////////////////// Payment Section ///////////////////
-///////////////////                  //////////////////
+//Payment
 $('#paypal, #bitcoin').hide();
 
-//Set credit card as default method
+//Set credit card as default
 $('#payment').val("credit card");
 
 $('#payment').change(function(){
@@ -165,10 +155,8 @@ $('#payment').change(function(){
 });
 
 
-/////////////////// Form Validation Section ////////////
-///////////////////                  ///////////////////
+//Form Validation
 
-// Add Error/Success Indicators on Keyup for fun
 $('#name, #mail, #cc-num, #zip, #cvv, #other-field').keyup(function (){
 	if ( $(this).val() === "")  {
 		$(this).removeClass('success');
@@ -229,4 +217,4 @@ $('form').submit(function (e){
 });
 
 
-}); // End Document ready
+});
